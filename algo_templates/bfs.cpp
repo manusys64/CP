@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// basic structure of bfs
 void bfs (int source, vector<int> graph[], vector<bool>& visited) {
 	queue<int> q;
 	q.push(source);
