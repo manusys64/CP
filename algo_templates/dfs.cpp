@@ -26,7 +26,7 @@ int main() {
 	vector<int> graph[n + 1];
 	vector<bool> visited(n + 1, false);
 
-	// Takig input of graph
+	// Taking input of graph
 	for (int i = 0; i < n - 1; ++i) {
 		int node_1, node_2;
 		cin >> node_1 >> node_2;
