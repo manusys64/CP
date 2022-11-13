@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+//Alias
 #define ll long long
 #define sz(a) (int)a.size()
 
+//Constants
 const long double PI = 3.141592653589793238;
 const int MOD = 1e9+7;
 
-#define debug(ans) cout << '[' << ans << ']' << " ";
-
+//personal variadic funtion
 void print(){
 	cout << "\n";
 }
@@ -18,7 +18,24 @@ void print(const T& first, const types&...args) {
 	cout << first << " ";
 	print(args...);
 }
+void DBG() {
+		cerr << "]" << endl;
+}
+template<class H, class... T> void DBG(H h, T... t) {
+		cerr << to_string(h);
+			if(sizeof...(t))
+						cerr << ", ";
+				DBG(t...);
+}
 
+// Debug
+#ifdef _DEBUG
+#define dbg(...) cerr << "LINE(" << __LINE__ << ") -> [" << #__VA_ARGS__ << "]: [", DBG(__VA_ARGS__)
+#else
+#define dbg(...) 0
+#endif
+
+// Binary Exponentiation
 int _pow(int a, ll b){
 	int ans = 1;
 	while(b>0){
@@ -31,10 +48,12 @@ int _pow(int a, ll b){
 	return ans;
 }
 
+// LCM
 int lcm(int a, int b){
 	return (a*b)/__gcd(a, b);
 }
 
+// log(a) to the base (b)
 int _log(int a, int b){
 	return log2(a)/log2(b);
 }
@@ -42,6 +61,7 @@ int _log(int a, int b){
 void solve(){
 	;
 }
+
 int main() { 
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
